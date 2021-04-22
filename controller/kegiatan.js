@@ -43,7 +43,25 @@ exports.create= (data) =>
       pesan: 'gagal mendapatkan data'
     }))
   })
- 
+
+
+  exports.edit = (data, id) =>
+  new Promise((resolve, reject) => {
+    kegiatanModel.updateOne({
+      _id: objectId(id)
+    }, data).then(() => {
+      resolve({
+        sukses: true,
+        pesan: 'berhasil ubah'
+      })
+    }).catch(() => {
+      reject({
+        sukses: true,
+        pesan: 'gagal ubah'
+      })
+    })
+  })
+
   exports.hapus = ( id) =>
   new Promise((resolve, reject) => {
     kegiatanModel.deleteOne({
