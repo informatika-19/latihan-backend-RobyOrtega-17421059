@@ -39,4 +39,4 @@ app.use('/kegiatan', require('./routes/kegiatan'))
 
   app.listen(3000, () =>{
       console.log('server started')
-  })
+  })  

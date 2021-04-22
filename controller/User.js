@@ -1,6 +1,5 @@
 const usermodel = require('../model/user')
 const bcrypt = require('bcrypt')
-const user = require('../model/user')
 exports.register = (data) =>
 new Promise((resolve, reject) => {
  console.log(data)
