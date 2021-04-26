@@ -1,4 +1,3 @@
-const { findOne } = require('../model/kegiatan')
 const kegiatanModel = require('../model/kegiatan')
 const objectId = require('mongoose').Types.ObjectId
 exports.create= (data) =>
